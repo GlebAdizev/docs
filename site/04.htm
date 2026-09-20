@@ -1,0 +1,177 @@
+<HTML>
+    <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>Урок 4: ветвления (if, switch)</TITLE>
+    </HEAD>
+    <BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+    
+    <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
+      
+      <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
+      <TR align=left valign=top>
+        <!-- Ячейка 1.1: Логотип — ссылка на главную, фиксированная высота 120 -->
+        <TD width=120 height=120 valign=top>
+          <A href="index.htm">
+            <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+          </A>
+        </TD>
+        
+        <!-- Ячейка 1.2: УРОК (объединена по вертикали на 2 строки) -->
+        <TD rowspan="2" valign=top>
+          <H3>Урок 4: ветвления (if, switch)</H3>
+          
+          <P>В этом уроке мы научимся управлять ходом выполнения программы с помощью условных операторов <B>if</B> и <B>switch</B>.</P>
+          
+          <H4>Оператор if</H4>
+          <P>Простейшая форма ветвления — это оператор <B>if</B>. Если условие истинно, выполняется блок кода:</P>
+          
+          <PRE>
+    if (условие) {
+        // код, который выполнится, если условие истинно
+    }
+          </PRE>
+          
+          <P>Пример:</P>
+          <PRE>
+    int age = 18;
+    
+    if (age &gt;= 18) {
+        std::cout &lt;&lt; "Доступ разрешён" &lt;&lt; std::endl;
+    }
+          </PRE>
+          
+          <H4>Конструкция if-else</H4>
+          <P>Если нужно выполнить один блок кода при истинном условии и другой — при ложном, используется <B>else</B>:</P>
+          
+          <PRE>
+    if (условие) {
+        // код, если условие истинно
+    } else {
+        // код, если условие ложно
+    }
+          </PRE>
+          
+          <P>Пример:</P>
+          <PRE>
+    int age = 16;
+    
+    if (age &gt;= 18) {
+        std::cout &lt;&lt; "Доступ разрешён" &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "Доступ запрещён" &lt;&lt; std::endl;
+    }
+          </PRE>
+          
+          <H4>Конструкция else if</H4>
+          <P>Для проверки нескольких условий используется цепочка <B>else if</B>:</P>
+          
+          <PRE>
+    int score = 85;
+    
+    if (score &gt;= 90) {
+        std::cout &lt;&lt; "Отлично" &lt;&lt; std::endl;
+    } else if (score &gt;= 75) {
+        std::cout &lt;&lt; "Хорошо" &lt;&lt; std::endl;
+    } else if (score &gt;= 60) {
+        std::cout &lt;&lt; "Удовлетворительно" &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "Неудовлетворительно" &lt;&lt; std::endl;
+    }
+          </PRE>
+          
+          <H4>Оператор switch</H4>
+          <P>Оператор <B>switch</B> удобен, когда нужно сравнить одну переменную с несколькими значениями:</P>
+          
+          <PRE>
+    int day = 3;
+    
+    switch (day) {
+        case 1:
+            std::cout &lt;&lt; "Понедельник" &lt;&lt; std::endl;
+            break;
+        case 2:
+            std::cout &lt;&lt; "Вторник" &lt;&lt; std::endl;
+            break;
+        case 3:
+            std::cout &lt;&lt; "Среда" &lt;&lt; std::endl;
+            break;
+        default:
+            std::cout &lt;&lt; "Другой день" &lt;&lt; std::endl;
+    }
+          </PRE>
+          
+          <P>Оператор <B>break</B> завершает выполнение switch. Без него выполнение «провалится» в следующий case.</P>
+          
+          <H4>Пример программы</H4>
+          <PRE>
+    #include &lt;iostream&gt;
+    
+    int main() {
+        int age = 20;
+        
+        if (age &gt;= 18) {
+            std::cout &lt;&lt; "Вы совершеннолетний" &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "Вы ещё несовершеннолетний" &lt;&lt; std::endl;
+        }
+        
+        int day = 5;
+        switch (day) {
+            case 5:
+                std::cout &lt;&lt; "Пятница!" &lt;&lt; std::endl;
+                break;
+            default:
+                std::cout &lt;&lt; "Не пятница" &lt;&lt; std::endl;
+        }
+        
+        return 0;
+    }
+          </PRE>
+          
+          <P><A href="03.htm">&lt;&lt; Предыдущий урок</A> | <A href="05.htm">Следующий урок &gt;&gt;</A></P>
+        </TD>
+      </TR>
+      
+      <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
+      <TR align=left valign=top>
+        <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
+        <TD valign=top>
+          <P>
+            <B>Уроки:</B><BR><BR>
+            <A href="01.htm">Урок 1</A><BR>
+            <A href="02.htm">Урок 2</A><BR>
+            <A href="03.htm">Урок 3</A><BR>
+            <A href="04.htm">Урок 4</A><BR>
+            <A href="05.htm">Урок 5</A><BR>
+            <A href="06.htm">Урок 6</A><BR>
+            <A href="07.htm">Урок 7</A><BR>
+            <A href="08.htm">Урок 8</A><BR>
+            <A href="09.htm">Урок 9</A><BR>
+            <A href="10.htm">Урок 10</A>
+          </P>
+          <P>
+            <A href="index.htm">На главную</A>
+          </P>
+        </TD>
+        <!-- Место для второй ячейки занято rowspan'ом из строки 1 -->
+      </TR>
+    
+      <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
+      <TR align=left valign=top>
+         <!-- Ячейка 3.1: Издатели -->
+         <TD valign=top>
+          <P>Издатели:<BR>
+             Адищев<BR>
+             Грунин<BR>
+             Князев</P>
+        </TD>
+        <!-- Ячейка 3.2: Помощь -->
+        <TD valign=top>
+          <P>Нужна помощь?<BR>
+    Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
+        </TD>
+      </TR>
+    
+    </TABLE>
+    </BODY>
+    </HTML>
