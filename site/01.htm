@@ -1,105 +1,105 @@
 <HTML>
-  <HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <TITLE>Урок 1: первая программа, компиляция</TITLE>
-  </HEAD>
-  <BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Урок 1: первая программа, компиляция</TITLE>
+<SCRIPT language="JavaScript" src="script.js"></SCRIPT>
+</HEAD>
+<BODY background="PIC/fon.jpg" text=black link=black alink=black vlink=black>
+
+<TABLE border=0 cellspacing=0 cellpadding=10 width=600>
   
-  <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
+  <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
+  <TR align=left valign=top>
+    <!-- Ячейка 1.1: Логотип -->
+    <TD width=120 height=120 valign=top>
+      <A href="index.htm">
+        <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+      </A>
+    </TD>
     
-    <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
-    <TR align=left valign=top>
-      <!-- Ячейка 1.1: Логотип — ссылка на главную -->
-      <TD width=120 height="120" valign=top>
-        <A href="index.htm">
-          <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
-        </A>
-      </TD>
+    <!-- Ячейка 1.2: УРОК -->
+    <TD rowspan="2" valign=top>
+      <H3>Урок 1: первая программа, компиляция</H3>
       
-      <!-- Ячейка 1.2: УРОК (объединена по вертикали на 2 строки) -->
-      <TD rowspan="2" valign=top>
-        <H3>Урок 1: первая программа, компиляция</H3>
-        
-        <P>В этом уроке мы напишем первую программу на C++ и научимся её компилировать.</P>
-        
-        <H4>Первая программа</H4>
-        <P>Традиционно первая программа выводит на экран приветствие. Вот её код:</P>
-        
-        <PRE>
-  #include &lt;iostream&gt;
+      <P>В этом уроке мы напишем первую программу на C++ и научимся её компилировать.</P>
+      
+      <H4>Первая программа</H4>
+      <P>Традиционно первая программа выводит на экран приветствие. Вот её код:</P>
+      
+      <PRE>
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Привет, мир!" &lt;&lt; std::endl;
+    return 0;
+}
+      </PRE>
+      
+      <H4>Разбор программы</H4>
+      <UL type="disc">
+        <LI><B>#include &lt;iostream&gt;</B> — подключает библиотеку для ввода-вывода.
+        <LI><B>int main()</B> — главная функция, с которой начинается выполнение программы.
+        <LI><B>std::cout</B> — поток вывода на экран.
+        <LI><B>&lt;&lt;</B> — оператор передачи данных в поток.
+        <LI><B>return 0;</B> — завершает программу с кодом 0 (успех).
+      </UL>
+      
+      <H4>Компиляция</H4>
+      <P>Чтобы запустить программу, её нужно скомпилировать. Например, в компиляторе g++ это делается так:</P>
+      
+      <PRE>
+g++ main.cpp -o main
+./main
+      </PRE>
+      
+      <P>После выполнения вы увидите на экране:</P>
+      <PRE>
+Привет, мир!
+      </PRE>
+      
+      <P><A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Перейти к следующему уроку &gt;&gt;</A></P>
+    </TD>
+  </TR>
   
-  int main() {
-      std::cout &lt;&lt; "Привет, мир!" &lt;&lt; std::endl;
-      return 0;
-  }
-        </PRE>
-        
-        <H4>Разбор программы</H4>
-        <UL type="disc">
-          <LI><B>#include &lt;iostream&gt;</B> — подключает библиотеку для ввода-вывода.
-          <LI><B>int main()</B> — главная функция, с которой начинается выполнение программы.
-          <LI><B>std::cout</B> — поток вывода на экран.
-          <LI><B>&lt;&lt;</B> — оператор передачи данных в поток.
-          <LI><B>return 0;</B> — завершает программу с кодом 0 (успех).
-        </UL>
-        
-        <H4>Компиляция</H4>
-        <P>Чтобы запустить программу, её нужно скомпилировать. Например, в компиляторе g++ это делается так:</P>
-        
-        <PRE>
-  g++ main.cpp -o main
-  ./main
-        </PRE>
-        
-        <P>После выполнения вы увидите на экране:</P>
-        <PRE>
-  Привет, мир!
-        </PRE>
-        
-        <P><A href="02.htm">Перейти к следующему уроку &gt;&gt;</A></P>
-      </TD>
-    </TR>
-    
-    <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
-    <TR align=left valign=top>
-      <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
-      <TD valign=top>
-        <P>
-          <B>Уроки:</B><BR><BR>
-          <A href="01.htm">Урок 1</A><BR>
-          <A href="02.htm">Урок 2</A><BR>
-          <A href="03.htm">Урок 3</A><BR>
-          <A href="04.htm">Урок 4</A><BR>
-          <A href="05.htm">Урок 5</A><BR>
-          <A href="06.htm">Урок 6</A><BR>
-          <A href="07.htm">Урок 7</A><BR>
-          <A href="08.htm">Урок 8</A><BR>
-          <A href="09.htm">Урок 9</A><BR>
-          <A href="10.htm">Урок 10</A>
-        </P>
-        <P>
-          <A href="index.htm">На главную</A>
-        </P>
-      </TD>
-      <!-- Место для второй ячейки занято rowspan'ом из строки 1 -->
-    </TR>
-  
-    <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
-    <TR align=left valign=top>
-       <!-- Ячейка 3.1: Издатели -->
-       <TD valign=top>
-        <P>Издатели:<BR>
-           Адищев<BR>
-           Грунин<BR>
-           Князев</P>
-      </TD>
-      <!-- Ячейка 3.2: Помощь -->
-      <TD valign=top>
-        <P>Нужна помощь?<BR>
-  Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
-      </TD>
-    </TR>
-  
-  </TABLE>
-  </BODY>
-  </HTML>
+  <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
+  <TR align=left valign=top>
+    <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
+    <TD valign=top>
+      <P>
+        <B>Уроки:</B><BR><BR>
+        <A href="01.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 1</A><BR>
+        <A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 2</A><BR>
+        <A href="03.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 3</A><BR>
+        <A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 4</A><BR>
+        <A href="05.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 5</A><BR>
+        <A href="06.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 6</A><BR>
+        <A href="07.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 7</A><BR>
+        <A href="08.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 8</A><BR>
+        <A href="09.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 9</A><BR>
+        <A href="10.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 10</A>
+      </P>
+      <P>
+        <A href="index.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
+      </P>
+    </TD>
+  </TR>
+
+  <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
+  <TR align=left valign=top>
+     <!-- Ячейка 3.1: Издатели -->
+     <TD valign=top>
+      <P>Издатели:<BR>
+         Адищев<BR>
+         Грунин<BR>
+         Князев</P>
+    </TD>
+    <!-- Ячейка 3.2: Помощь -->
+    <TD valign=top>
+      <P>Нужна помощь?<BR>
+Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
+    </TD>
+  </TR>
+
+</TABLE>
+</BODY>
+</HTML>
