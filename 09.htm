@@ -1,0 +1,144 @@
+<HTML>
+    <HEAD>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>Урок 9: наследование</TITLE>
+    </HEAD>
+    <BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+    
+    <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
+      
+      <TR align=left valign=top>
+        <TD width=120 height=120 valign=top>
+          <A href="index.htm">
+            <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+          </A>
+        </TD>
+        <TD rowspan="2" valign=top>
+          <H3>Урок 9: наследование</H3>
+          
+          <P>В этом уроке мы изучим наследование — механизм, позволяющий создавать новый класс на основе существующего.</P>
+          
+          <H4>Что такое наследование?</H4>
+          <P>Наследование позволяет новому классу (наследнику) перенимать поля и методы родительского класса (базового). Это уменьшает дублирование кода и упрощает его поддержку.</P>
+          
+          <H4>Синтаксис наследования</H4>
+          <PRE>
+    class Базовый {
+        // поля и методы
+    };
+    
+    class Наследник : public Базовый {
+        // дополнительные поля и методы
+    };
+          </PRE>
+          
+          <H4>Пример</H4>
+          <PRE>
+    class Animal {
+    public:
+        void eat() {
+            std::cout &lt;&lt; "Животное ест" &lt;&lt; std::endl;
+        }
+    };
+    
+    class Cat : public Animal {
+    public:
+        void meow() {
+            std::cout &lt;&lt; "Мяу!" &lt;&lt; std::endl;
+        }
+    };
+          </PRE>
+          
+          <P>Класс <B>Cat</B> наследует метод <B>eat()</B> от класса <B>Animal</B> и добавляет свой метод <B>meow()</B>:</P>
+          <PRE>
+    Cat cat;
+    cat.eat();   // Животное ест
+    cat.meow();  // Мяу!
+          </PRE>
+          
+          <H4>Типы наследования</H4>
+          <UL type="disc">
+            <LI><B>public</B> — открытое наследование (наиболее частое).
+            <LI><B>protected</B> — защищённое наследование.
+            <LI><B>private</B> — закрытое наследование.
+          </UL>
+          
+          <H4>Переопределение методов</H4>
+          <P>Наследник может переопределить метод базового класса:</P>
+          <PRE>
+    class Cat : public Animal {
+    public:
+        void eat() {
+            std::cout &lt;&lt; "Кот ест рыбу" &lt;&lt; std::endl;
+        }
+    };
+          </PRE>
+          
+          <H4>Пример программы</H4>
+          <PRE>
+    #include &lt;iostream&gt;
+    
+    class Animal {
+    public:
+        void eat() {
+            std::cout &lt;&lt; "Животное ест" &lt;&lt; std::endl;
+        }
+    };
+    
+    class Cat : public Animal {
+    public:
+        void meow() {
+            std::cout &lt;&lt; "Мяу!" &lt;&lt; std::endl;
+        }
+    };
+    
+    int main() {
+        Cat cat;
+        cat.eat();
+        cat.meow();
+        
+        return 0;
+    }
+          </PRE>
+          
+          <P><A href="08.htm">&lt;&lt; Предыдущий урок</A> | <A href="10.htm">Следующий урок &gt;&gt;</A></P>
+        </TD>
+      </TR>
+      
+      <TR align=left valign=top>
+        <TD valign=top>
+          <P>
+            <B>Уроки:</B><BR><BR>
+            <A href="01.htm">Урок 1</A><BR>
+            <A href="02.htm">Урок 2</A><BR>
+            <A href="03.htm">Урок 3</A><BR>
+            <A href="04.htm">Урок 4</A><BR>
+            <A href="05.htm">Урок 5</A><BR>
+            <A href="06.htm">Урок 6</A><BR>
+            <A href="07.htm">Урок 7</A><BR>
+            <A href="08.htm">Урок 8</A><BR>
+            <A href="09.htm">Урок 9</A><BR>
+            <A href="10.htm">Урок 10</A>
+          </P>
+          <P>
+            <A href="index.htm">На главную</A>
+          </P>
+        </TD>
+      </TR>
+    
+      <TR align=left valign=top>
+         <TD valign=top>
+          <P>Издатели:<BR>
+             Адищев<BR>
+             Грунин<BR>
+             Князев</P>
+        </TD>
+        <TD valign=top>
+          <P>Нужна помощь?<BR>
+    Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
+        </TD>
+      </TR>
+    
+    </TABLE>
+    </BODY>
+    </HTML>
