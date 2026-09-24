@@ -24,10 +24,5 @@ content="text/html; charset=windows-1251">
    onmouseover=src='./pic/right1.gif'
    onmouseout=src='./pic/right.gif'
    ></A>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Иван Иванов
-<A href=mailto:ivan@mail.ru
-   > ivan @ mail.ru</A>
 </BODY>
 </HTML>
-# site
