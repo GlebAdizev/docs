@@ -1,133 +1,125 @@
 <HTML>
-    <HEAD>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>Урок 3: операторы, выражения</TITLE>
-    </HEAD>
-    <BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Урок 3: операторы, выражения</TITLE>
+<SCRIPT language="JavaScript" src="script.js"></SCRIPT>
+</HEAD>
+<BODY background="PIC/fon.jpg" text=black link=black alink=black vlink=black>
+
+<TABLE border=0 cellspacing=0 cellpadding=10 width=600>
+  
+  <TR align=left valign=top>
+    <TD width=120 height=120 valign=top>
+      <A href="index.htm">
+        <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+      </A>
+    </TD>
     
-    <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
+    <TD rowspan="2" valign=top>
+      <H3>Урок 3: операторы, выражения</H3>
       
-      <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
-      <TR align=left valign=top>
-        <!-- Ячейка 1.1: Логотип — ссылка на главную, фиксированная высота 120 -->
-        <TD width=120 height=120 valign=top>
-          <A href="index.html">
-            <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
-          </A>
-        </TD>
-        
-        <!-- Ячейка 1.2: УРОК (объединена по вертикали на 2 строки) -->
-        <TD rowspan="2" valign=top>
-          <H3>Урок 3: операторы, выражения</H3>
-          
-          <P>В этом уроке мы изучим основные операторы языка C++ и научимся составлять выражения.</P>
-          
-          <H4>Арифметические операторы</H4>
-          <UL type="disc">
-            <LI><B>+</B> — сложение
-            <LI><B>-</B> — вычитание
-            <LI><B>*</B> — умножение
-            <LI><B>/</B> — деление
-            <LI><B>%</B> — остаток от деления
-          </UL>
-          
-          <PRE>
+      <P>В этом уроке мы изучим основные операторы языка C++ и научимся составлять выражения.</P>
+      
+      <H4>Арифметические операторы</H4>
+      <UL type="disc">
+        <LI><B>+</B> — сложение
+        <LI><B>-</B> — вычитание
+        <LI><B>*</B> — умножение
+        <LI><B>/</B> — деление
+        <LI><B>%</B> — остаток от деления
+      </UL>
+      
+      <PRE>
+int a = 10, b = 3;
+int sum = a + b;      // 13
+int diff = a - b;     // 7
+int mult = a * b;     // 30
+int div = a / b;      // 3
+int mod = a % b;      // 1
+      </PRE>
+      
+      <H4>Операторы сравнения</H4>
+      <UL type="disc">
+        <LI><B>==</B> — равно
+        <LI><B>!=</B> — не равно
+        <LI><B>&gt;</B> — больше
+        <LI><B>&lt;</B> — меньше
+        <LI><B>&gt;=</B> — больше или равно
+        <LI><B>&lt;=</B> — меньше или равно
+      </UL>
+      
+      <P>Результат сравнения — логическое значение (<B>true</B> или <B>false</B>).</P>
+      
+      <H4>Логические операторы</H4>
+      <UL type="disc">
+        <LI><B>&amp;&amp;</B> — логическое И (AND)
+        <LI><B>||</B> — логическое ИЛИ (OR)
+        <LI><B>!</B> — логическое НЕ (NOT)
+      </UL>
+      
+      <H4>Приоритет операторов</H4>
+      <P>Операторы выполняются в определённом порядке. Например, умножение и деление имеют более высокий приоритет, чем сложение и вычитание. Скобки позволяют изменить порядок:</P>
+      
+      <PRE>
+int result = 2 + 3 * 4;       // 14
+int result2 = (2 + 3) * 4;    // 20
+      </PRE>
+      
+      <H4>Пример программы</H4>
+      <PRE>
+#include &lt;iostream&gt;
+
+int main() {
     int a = 10, b = 3;
-    int sum = a + b;      // 13
-    int diff = a - b;     // 7
-    int mult = a * b;     // 30
-    int div = a / b;      // 3
-    int mod = a % b;      // 1
-          </PRE>
-          
-          <H4>Операторы сравнения</H4>
-          <UL type="disc">
-            <LI><B>==</B> — равно
-            <LI><B>!=</B> — не равно
-            <LI><B>&gt;</B> — больше
-            <LI><B>&lt;</B> — меньше
-            <LI><B>&gt;=</B> — больше или равно
-            <LI><B>&lt;=</B> — меньше или равно
-          </UL>
-          
-          <P>Результат сравнения — логическое значение (<B>true</B> или <B>false</B>).</P>
-          
-          <H4>Логические операторы</H4>
-          <UL type="disc">
-            <LI><B>&amp;&amp;</B> — логическое И (AND)
-            <LI><B>||</B> — логическое ИЛИ (OR)
-            <LI><B>!</B> — логическое НЕ (NOT)
-          </UL>
-          
-          <H4>Приоритет операторов</H4>
-          <P>Операторы выполняются в определённом порядке. Например, умножение и деление имеют более высокий приоритет, чем сложение и вычитание. Скобки позволяют изменить порядок:</P>
-          
-          <PRE>
-    int result = 2 + 3 * 4;       // 14
-    int result2 = (2 + 3) * 4;    // 20
-          </PRE>
-          
-          <H4>Пример программы</H4>
-          <PRE>
-    #include &lt;iostream&gt;
     
-    int main() {
-        int a = 10, b = 3;
-        
-        std::cout &lt;&lt; "Сумма: " &lt;&lt; a + b &lt;&lt; std::endl;
-        std::cout &lt;&lt; "Разность: " &lt;&lt; a - b &lt;&lt; std::endl;
-        std::cout &lt;&lt; "Произведение: " &lt;&lt; a * b &lt;&lt; std::endl;
-        std::cout &lt;&lt; "Частное: " &lt;&lt; a / b &lt;&lt; std::endl;
-        std::cout &lt;&lt; "Остаток: " &lt;&lt; a % b &lt;&lt; std::endl;
-        
-        return 0;
-    }
-          </PRE>
-          
-          <P><A href="02.htm">&lt;&lt; Предыдущий урок</A> | <A href="04.htm">Следующий урок &gt;&gt;</A></P>
-        </TD>
-      </TR>
+    std::cout &lt;&lt; "Сумма: " &lt;&lt; a + b &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Разность: " &lt;&lt; a - b &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Произведение: " &lt;&lt; a * b &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Частное: " &lt;&lt; a / b &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Остаток: " &lt;&lt; a % b &lt;&lt; std::endl;
+    
+    return 0;
+}
+      </PRE>
       
-      <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
-      <TR align=left valign=top>
-        <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
-        <TD valign=top>
-          <P>
-            <B>Уроки:</B><BR><BR>
-            <A href="01.htm">Урок 1</A><BR>
-            <A href="02.htm">Урок 2</A><BR>
-            <A href="03.htm">Урок 3</A><BR>
-            <A href="04.htm">Урок 4</A><BR>
-            <A href="05.htm">Урок 5</A><BR>
-            <A href="06.htm">Урок 6</A><BR>
-            <A href="07.htm">Урок 7</A><BR>
-            <A href="08.htm">Урок 8</A><BR>
-            <A href="09.htm">Урок 9</A><BR>
-            <A href="10.htm">Урок 10</A>
-          </P>
-          <P>
-            <A href="index.htm">На главную</A>
-          </P>
-        </TD>
-        <!-- Место для второй ячейки занято rowspan'ом из строки 1 -->
-      </TR>
-    
-      <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
-      <TR align=left valign=top>
-         <!-- Ячейка 3.1: Издатели -->
-         <TD valign=top>
-          <P>Издатели:<BR>
-             Адищев<BR>
-             Грунин<BR>
-             Князев</P>
-        </TD>
-        <!-- Ячейка 3.2: Помощь -->
-        <TD valign=top>
-          <P>Нужна помощь?<BR>
-    Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
-        </TD>
-      </TR>
-    
-    </TABLE>
-    </BODY>
-    </HTML>
+      <P><A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">&lt;&lt; Предыдущий урок</A> | <A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Следующий урок &gt;&gt;</A></P>
+    </TD>
+  </TR>
+  
+  <TR align=left valign=top>
+    <TD valign=top>
+      <P>
+        <B>Уроки:</B><BR><BR>
+        <A href="01.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 1</A><BR>
+        <A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 2</A><BR>
+        <A href="03.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 3</A><BR>
+        <A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 4</A><BR>
+        <A href="05.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 5</A><BR>
+        <A href="06.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 6</A><BR>
+        <A href="07.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 7</A><BR>
+        <A href="08.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 8</A><BR>
+        <A href="09.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 9</A><BR>
+        <A href="10.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 10</A>
+      </P>
+      <P>
+        <A href="index.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
+      </P>
+    </TD>
+  </TR>
+
+  <TR align=left valign=top>
+     <TD valign=top>
+      <P>Издатели:<BR>
+         Адищев<BR>
+         Грунин<BR>
+         Князев</P>
+    </TD>
+    <TD valign=top>
+      <P>Нужна помощь?<BR>
+Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
+    </TD>
+  </TR>
+
+</TABLE>
+</BODY>
+</HTML>
