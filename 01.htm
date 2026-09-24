@@ -8,16 +8,14 @@
 
 <TABLE border=0 cellspacing=0 cellpadding=10 width=600>
   
-  <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
   <TR align=left valign=top>
-    <!-- Ячейка 1.1: Логотип -->
     <TD width=120 height=120 valign=top>
-      <A href="index.htm">
-        <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+      <A href="index.html">
+        <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную"
+             onMouseOver="logoHover(this);" onMouseOut="logoOut(this);">
       </A>
     </TD>
     
-    <!-- Ячейка 1.2: УРОК -->
     <TD rowspan="2" valign=top>
       <H3>Урок 1: первая программа, компиляция</H3>
       
@@ -61,9 +59,7 @@ g++ main.cpp -o main
     </TD>
   </TR>
   
-  <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
   <TR align=left valign=top>
-    <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
     <TD valign=top>
       <P>
         <B>Уроки:</B><BR><BR>
@@ -79,21 +75,18 @@ g++ main.cpp -o main
         <A href="10.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 10</A>
       </P>
       <P>
-        <A href="index.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
+        <A href="index.html" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
       </P>
     </TD>
   </TR>
 
-  <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
   <TR align=left valign=top>
-     <!-- Ячейка 3.1: Издатели -->
      <TD valign=top>
       <P>Издатели:<BR>
          Адищев<BR>
          Грунин<BR>
          Князев</P>
     </TD>
-    <!-- Ячейка 3.2: Помощь -->
     <TD valign=top>
       <P>Нужна помощь?<BR>
 Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>

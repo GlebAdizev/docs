@@ -2,8 +2,9 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <TITLE>Virtual Cat</TITLE>
+<SCRIPT language="JavaScript" src="script.js"></SCRIPT>
 </HEAD>
-<BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+<BODY background="PIC/fon.jpg" text=black link=black alink=black vlink=black>
 
 <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
   
@@ -11,7 +12,8 @@
   <TR align=left valign=top>
     <!-- Ячейка 1.1: Логотип -->
     <TD width=120>
-      <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="logo">
+      <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="logo"
+           onMouseOver="logoHover(this);" onMouseOut="logoOut(this);">
     </TD>
     <!-- Ячейка 1.2: Заголовок -->
     <TD>
@@ -19,44 +21,57 @@
     </TD>
   </TR>
   
-  <!-- ================= СТРОКА 2: МЕНЮ И СОДЕРЖАНИЕ ================= -->
+  <!-- ================= СТРОКА 2: МЕНЮ И ПРИВЕТСТВИЕ ================= -->
   <TR align=left valign=top>
-    <!-- Ячейка 2.1: МЕНЮ (Работы, Советы, Ссылки) -->
+    <!-- Ячейка 2.1: МЕНЮ (Уроки, На главную) -->
     <TD valign=top>
       <P>
-        <A href="01.htm">Работы</A><BR><BR>
-        <A href="02.htm">Советы</A><BR><BR>
-        <A href="03.htm">Ссылки</A>
+        <B>Уроки:</B><BR><BR>
+        <A href="01.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 1</A><BR>
+        <A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 2</A><BR>
+        <A href="03.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 3</A><BR>
+        <A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 4</A><BR>
+        <A href="05.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 5</A><BR>
+        <A href="06.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 6</A><BR>
+        <A href="07.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 7</A><BR>
+        <A href="08.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 8</A><BR>
+        <A href="09.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 9</A><BR>
+        <A href="10.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 10</A>
+      </P>
+      <P>
+        <A href="index.html" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
       </P>
     </TD>
-    <!-- Ячейка 2.2: СОДЕРЖАНИЕ C++ -->
+    <!-- Ячейка 2.2: ПРИВЕТСТВЕННЫЙ ТЕКСТ -->
     <TD valign=top>
-     
-
-      <!-- ================= РАЗДЕЛ 1 ================= -->
-      <OL type="1">
-      <LI>Основы языка C++
+      
+      <H3>Добро пожаловать!</H3>
+      
+      <P>Этот сайт создан для тех, кто хочет освоить язык программирования <B>C++</B> с нуля. Здесь вы найдёте структурированные уроки, которые проведут вас от первой строчки кода до серьёзных концепций объектно-ориентированного программирования.</P>
+      
+      <H4>Что вас ждёт?</H4>
       <UL type="disc">
-      <LI><A href="01.htm">Урок 1: первая программа, компиляция</A>
-      <LI><A href="02.htm">Урок 2: переменные, типы данных, константы</A>
-      <LI><A href="03.htm">Урок 3: операторы, выражения</A>
-      <LI><A href="04.htm">Урок 4: ветвления (if, switch)</A>
-      <LI><A href="05.htm">Урок 5: циклы (for, while, do-while)</A>
-      <LI><A href="06.htm">Урок 6: функции и области видимости</A>
+        <LI><B>10 подробных уроков</B> — от простого к сложному.
+        <LI><B>Примеры кода</B> с разбором каждой строки.
+        <LI><B>Практика</B> — вы сами сможете запустить программы.
+        <LI><B>Справочник</B> по синтаксису C++.
       </UL>
-
-      <LI>Объектно-ориентированное программирование
+      
+      <H4>Как пользоваться сайтом?</H4>
+      <P>Слева находится меню со всеми уроками. Начните с <B>Урока 1</B> и двигайтесь по порядку — каждый следующий урок опирается на предыдущий.</P>
+      
+      <P>Если что-то непонятно — загляните в раздел <B>Советы</B> (ссылка в подвале) или напишите нам.</P>
+      
+      <H4>Для кого этот курс?</H4>
       <UL type="disc">
-      <LI><A href="07.htm">Урок 7: классы и объекты</A>
-      <LI><A href="08.htm">Урок 8: конструкторы и деструкторы</A>
-      <LI><A href="09.htm">Урок 9: наследование</A>
-      <LI><A href="10.htm">Урок 10: полиморфизм, виртуальные функции</A>
+        <LI>Для начинающих, которые никогда не программировали.
+        <LI>Для тех, кто хочет освежить знания по C++.
+        <LI>Для студентов и школьников, готовящихся к экзаменам.
       </UL>
-      </OL>
-
-      <!-- ================= СПРАВОЧНИК ================= -->
-     
+      
+      <P><I>Удачи в обучении!</I></P>
     
+    </TD>
   </TR>
 
   <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
