@@ -1,181 +1,173 @@
 <HTML>
-    <HEAD>
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>Урок 5: циклы (for, while, do-while)</TITLE>
-    </HEAD>
-    <BODY background="PIC/fon.jpg" text=black link=blue alink=red vlink=purple>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Урок 5: циклы (for, while, do-while)</TITLE>
+<SCRIPT language="JavaScript" src="script.js"></SCRIPT>
+</HEAD>
+<BODY background="PIC/fon.jpg" text=black link=black alink=black vlink=black>
+
+<TABLE border=0 cellspacing=0 cellpadding=10 width=600>
+  
+  <TR align=left valign=top>
+    <TD width=120 height=120 valign=top>
+      <A href="index.htm">
+        <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
+      </A>
+    </TD>
     
-    <TABLE border=1 cellspacing=0 cellpadding=10 width=600>
+    <TD rowspan="2" valign=top>
+      <H3>Урок 5: циклы (for, while, do-while)</H3>
       
-      <!-- ================= СТРОКА 1: ЛОГОТИП + НАЧАЛО УРОКА ================= -->
-      <TR align=left valign=top>
-        <!-- Ячейка 1.1: Логотип — ссылка на главную, фиксированная высота 120 -->
-        <TD width=120 height=120 valign=top>
-          <A href="index.html">
-            <IMG src="PIC/logo.png" width=120 height=120 border=0 alt="logo" title="На главную">
-          </A>
-        </TD>
-        
-        <!-- Ячейка 1.2: УРОК (объединена по вертикали на 2 строки) -->
-        <TD rowspan="2" valign=top>
-          <H3>Урок 5: циклы (for, while, do-while)</H3>
-          
-          <P>В этом уроке мы изучим циклы — конструкции, которые позволяют повторять выполнение блока кода несколько раз.</P>
-          
-          <H4>Цикл for</H4>
-          <P>Цикл <B>for</B> используется, когда заранее известно количество повторений. Он состоит из трёх частей: инициализация, условие и шаг.</P>
-          
-          <PRE>
-    for (инициализация; условие; шаг) {
-        // тело цикла
-    }
-          </PRE>
-          
-          <P>Пример — вывод чисел от 1 до 5:</P>
-          <PRE>
-    for (int i = 1; i &lt;= 5; i++) {
-        std::cout &lt;&lt; i &lt;&lt; std::endl;
-    }
-          </PRE>
-          
-          <H4>Цикл while</H4>
-          <P>Цикл <B>while</B> выполняется, пока условие истинно. Проверка условия происходит <B>перед</B> каждой итерацией:</P>
-          
-          <PRE>
-    while (условие) {
-        // тело цикла
-    }
-          </PRE>
-          
-          <P>Пример:</P>
-          <PRE>
-    int i = 1;
-    
-    while (i &lt;= 5) {
-        std::cout &lt;&lt; i &lt;&lt; std::endl;
-        i++;
-    }
-          </PRE>
-          
-          <H4>Цикл do-while</H4>
-          <P>Цикл <B>do-while</B> похож на while, но проверка условия происходит <B>после</B> выполнения тела. Это значит, что тело цикла выполнится <B>хотя бы один раз</B>:</P>
-          
-          <PRE>
-    do {
-        // тело цикла
-    } while (условие);
-          </PRE>
-          
-          <P>Пример:</P>
-          <PRE>
-    int i = 1;
-    
-    do {
-        std::cout &lt;&lt; i &lt;&lt; std::endl;
-        i++;
-    } while (i &lt;= 5);
-          </PRE>
-          
-          <H4>Операторы break и continue</H4>
-          <UL type="disc">
-            <LI><B>break</B> — немедленно прерывает выполнение цикла.
-            <LI><B>continue</B> — пропускает оставшуюся часть тела цикла и переходит к следующей итерации.
-          </UL>
-          
-          <P>Пример с break:</P>
-          <PRE>
-    for (int i = 1; i &lt;= 10; i++) {
-        if (i == 5) break;
-        std::cout &lt;&lt; i &lt;&lt; std::endl;
-    }
-          </PRE>
-          
-          <P>Пример с continue:</P>
-          <PRE>
-    for (int i = 1; i &lt;= 5; i++) {
-        if (i == 3) continue;
-        std::cout &lt;&lt; i &lt;&lt; std::endl;
-    }
-          </PRE>
-          
-          <H4>Пример программы</H4>
-          <PRE>
-    #include &lt;iostream&gt;
-    
-    int main() {
-        // Цикл for
-        std::cout &lt;&lt; "Цикл for:" &lt;&lt; std::endl;
-        for (int i = 1; i &lt;= 5; i++) {
-            std::cout &lt;&lt; i &lt;&lt; " ";
-        }
-        std::cout &lt;&lt; std::endl;
-        
-        // Цикл while
-        std::cout &lt;&lt; "Цикл while:" &lt;&lt; std::endl;
-        int j = 1;
-        while (j &lt;= 5) {
-            std::cout &lt;&lt; j &lt;&lt; " ";
-            j++;
-        }
-        std::cout &lt;&lt; std::endl;
-        
-        // Цикл do-while
-        std::cout &lt;&lt; "Цикл do-while:" &lt;&lt; std::endl;
-        int k = 1;
-        do {
-            std::cout &lt;&lt; k &lt;&lt; " ";
-            k++;
-        } while (k &lt;= 5);
-        std::cout &lt;&lt; std::endl;
-        
-        return 0;
-    }
-          </PRE>
-          
-          <P><A href="04.htm">&lt;&lt; Предыдущий урок</A> | <A href="06.htm">Следующий урок &gt;&gt;</A></P>
-        </TD>
-      </TR>
+      <P>В этом уроке мы изучим циклы — конструкции, которые позволяют повторять выполнение блока кода несколько раз.</P>
       
-      <!-- ================= СТРОКА 2: МЕНЮ УРОКОВ ================= -->
-      <TR align=left valign=top>
-        <!-- Ячейка 2.1: МЕНЮ ПО УРОКАМ -->
-        <TD valign=top>
-          <P>
-            <B>Уроки:</B><BR><BR>
-            <A href="01.htm">Урок 1</A><BR>
-            <A href="02.htm">Урок 2</A><BR>
-            <A href="03.htm">Урок 3</A><BR>
-            <A href="04.htm">Урок 4</A><BR>
-            <A href="05.htm">Урок 5</A><BR>
-            <A href="06.htm">Урок 6</A><BR>
-            <A href="07.htm">Урок 7</A><BR>
-            <A href="08.htm">Урок 8</A><BR>
-            <A href="09.htm">Урок 9</A><BR>
-            <A href="10.htm">Урок 10</A>
-          </P>
-          <P>
-            <A href="index.htm">На главную</A>
-          </P>
-        </TD>
-        <!-- Место для второй ячейки занято rowspan'ом из строки 1 -->
-      </TR>
+      <H4>Цикл for</H4>
+      <P>Цикл <B>for</B> используется, когда заранее известно количество повторений. Он состоит из трёх частей: инициализация, условие и шаг.</P>
+      
+      <PRE>
+for (инициализация; условие; шаг) {
+    // тело цикла
+}
+      </PRE>
+      
+      <P>Пример — вывод чисел от 1 до 5:</P>
+      <PRE>
+for (int i = 1; i &lt;= 5; i++) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+      </PRE>
+      
+      <H4>Цикл while</H4>
+      <P>Цикл <B>while</B> выполняется, пока условие истинно. Проверка условия происходит <B>перед</B> каждой итерацией:</P>
+      
+      <PRE>
+while (условие) {
+    // тело цикла
+}
+      </PRE>
+      
+      <P>Пример:</P>
+      <PRE>
+int i = 1;
+
+while (i &lt;= 5) {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+    i++;
+}
+      </PRE>
+      
+      <H4>Цикл do-while</H4>
+      <P>Цикл <B>do-while</B> похож на while, но проверка условия происходит <B>после</B> выполнения тела. Это значит, что тело цикла выполнится <B>хотя бы один раз</B>:</P>
+      
+      <PRE>
+do {
+    // тело цикла
+} while (условие);
+      </PRE>
+      
+      <P>Пример:</P>
+      <PRE>
+int i = 1;
+
+do {
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+    i++;
+} while (i &lt;= 5);
+      </PRE>
+      
+      <H4>Операторы break и continue</H4>
+      <UL type="disc">
+        <LI><B>break</B> — немедленно прерывает выполнение цикла.
+        <LI><B>continue</B> — пропускает оставшуюся часть тела цикла и переходит к следующей итерации.
+      </UL>
+      
+      <P>Пример с break:</P>
+      <PRE>
+for (int i = 1; i &lt;= 10; i++) {
+    if (i == 5) break;
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+      </PRE>
+      
+      <P>Пример с continue:</P>
+      <PRE>
+for (int i = 1; i &lt;= 5; i++) {
+    if (i == 3) continue;
+    std::cout &lt;&lt; i &lt;&lt; std::endl;
+}
+      </PRE>
+      
+      <H4>Пример программы</H4>
+      <PRE>
+#include &lt;iostream&gt;
+
+int main() {
+    // Цикл for
+    std::cout &lt;&lt; "Цикл for:" &lt;&lt; std::endl;
+    for (int i = 1; i &lt;= 5; i++) {
+        std::cout &lt;&lt; i &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
     
-      <!-- ================= СТРОКА 3: ПОДВАЛ ================= -->
-      <TR align=left valign=top>
-         <!-- Ячейка 3.1: Издатели -->
-         <TD valign=top>
-          <P>Издатели:<BR>
-             Адищев<BR>
-             Грунин<BR>
-             Князев</P>
-        </TD>
-        <!-- Ячейка 3.2: Помощь -->
-        <TD valign=top>
-          <P>Нужна помощь?<BR>
-    Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
-        </TD>
-      </TR>
+    // Цикл while
+    std::cout &lt;&lt; "Цикл while:" &lt;&lt; std::endl;
+    int j = 1;
+    while (j &lt;= 5) {
+        std::cout &lt;&lt; j &lt;&lt; " ";
+        j++;
+    }
+    std::cout &lt;&lt; std::endl;
     
-    </TABLE>
-    </BODY>
-    </HTML>
+    // Цикл do-while
+    std::cout &lt;&lt; "Цикл do-while:" &lt;&lt; std::endl;
+    int k = 1;
+    do {
+        std::cout &lt;&lt; k &lt;&lt; " ";
+        k++;
+    } while (k &lt;= 5);
+    std::cout &lt;&lt; std::endl;
+    
+    return 0;
+}
+      </PRE>
+      
+      <P><A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">&lt;&lt; Предыдущий урок</A> | <A href="06.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Следующий урок &gt;&gt;</A></P>
+    </TD>
+  </TR>
+  
+  <TR align=left valign=top>
+    <TD valign=top>
+      <P>
+        <B>Уроки:</B><BR><BR>
+        <A href="01.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 1</A><BR>
+        <A href="02.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 2</A><BR>
+        <A href="03.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 3</A><BR>
+        <A href="04.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 4</A><BR>
+        <A href="05.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 5</A><BR>
+        <A href="06.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 6</A><BR>
+        <A href="07.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 7</A><BR>
+        <A href="08.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 8</A><BR>
+        <A href="09.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 9</A><BR>
+        <A href="10.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">Урок 10</A>
+      </P>
+      <P>
+        <A href="index.htm" onMouseOver="linkHover(this);" onMouseOut="linkOut(this);">На главную</A>
+      </P>
+    </TD>
+  </TR>
+
+  <TR align=left valign=top>
+     <TD valign=top>
+      <P>Издатели:<BR>
+         Адищев<BR>
+         Грунин<BR>
+         Князев</P>
+    </TD>
+    <TD valign=top>
+      <P>Нужна помощь?<BR>
+Звоните 8 800 555-06-75 или пишите sales@company.ru — изучим задачу и подберем подходящее обучение.</P>
+    </TD>
+  </TR>
+
+</TABLE>
+</BODY>
+</HTML>
